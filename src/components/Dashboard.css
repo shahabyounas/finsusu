@@ -5,12 +5,15 @@
 
 .dashboard-content {
   padding-top: 80px;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .tabs {
   display: flex;
   background-color: white;
-  padding: 0 1rem;
+  padding: 0 2rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 64px;
@@ -53,15 +56,15 @@
 }
 
 .main-content {
-  padding: 1rem;
+  padding: 2rem;
   width: 100%;
-  max-width: 100%;
-  margin: 0;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .tab-content {
   background-color: white;
-  padding: 1rem;
+  padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   min-height: 400px;

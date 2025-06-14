@@ -6,7 +6,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   width: 100%;
 }
 
@@ -52,10 +52,128 @@
   opacity: 0.8;
 }
 
+/* Status Cards Styles */
+.status-cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.status-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(138, 43, 226, 0.1);
+  min-height: 180px;
+}
+
+.status-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.status-card-title-section {
+  flex: 1;
+}
+
+.status-card-title {
+  color: #333;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+}
+
+.status-card-description {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.status-button {
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 1rem;
+}
+
+.status-button.active {
+  background-color: #28a745;
+  color: white;
+}
+
+.status-button.pending {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.status-button.completed {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.status-card-metrics {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.metric-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.metric-value {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.metric-tag {
+  font-size: 0.8rem;
+  color: #666;
+  background: #f8f9fa;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+}
+
+.manage-slots-button {
+  padding: 0.75rem 1.5rem;
+  background-color: #8A2BE2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.manage-slots-button:hover {
+  background-color: #7B1FA2;
+  transform: translateY(-2px);
+}
+
 /* Responsive adjustments */
 @media (max-width: 1200px) {
   .info-cards-container {
     grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .status-cards-container {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -76,5 +194,28 @@
 
   .info-card-icon {
     font-size: 2rem;
+  }
+
+  .status-card {
+    padding: 1.5rem;
+  }
+
+  .status-card-title {
+    font-size: 1.5rem;
+  }
+
+  .status-card-metrics {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .metric-item {
+    align-items: flex-start;
+  }
+
+  .manage-slots-button {
+    width: 100%;
+    margin-top: 1rem;
   }
 } 
