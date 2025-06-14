@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './DashboardTab.css';
 
 interface InfoCardProps {
@@ -20,11 +21,11 @@ interface StatusCardProps {
 
 const InfoCard: React.FC<InfoCardProps> = ({ title, value, icon }) => (
   <div className="info-card">
-    <div className="info-card-content">
+    <div className="info-card-header">
       <h3 className="info-card-title">{title}</h3>
-      <p className="info-card-value">{value}</p>
+      {icon && <div className="info-card-icon">{icon}</div>}
     </div>
-    {icon && <div className="info-card-icon">{icon}</div>}
+    <p className="info-card-value">{value}</p>
   </div>
 );
 
@@ -34,32 +35,40 @@ const StatusCard: React.FC<StatusCardProps> = ({
   status, 
   members, 
   monthlyDeposit 
-}) => (
-  <div className="status-card">
-    <div className="status-card-header">
-      <div className="status-card-title-section">
-        <h2 className="status-card-title">{title}</h2>
-        <p className="status-card-description">{description}</p>
+}) => {
+  const navigate = useNavigate();
+
+  const handleManageSlots = () => {
+    navigate('/manage-slots');
+  };
+
+  return (
+    <div className="status-card">
+      <div className="status-card-header">
+        <div className="status-card-title-section">
+          <h2 className="status-card-title">{title}</h2>
+          <p className="status-card-description">{description}</p>
+        </div>
+        <button className={`status-button ${status}`}>
+          {status.charAt(0).toUpperCase() + status.slice(1)}
+        </button>
       </div>
-      <button className={`status-button ${status}`}>
-        {status.charAt(0).toUpperCase() + status.slice(1)}
-      </button>
+      <div className="status-card-metrics">
+        <div className="metric-item">
+          <div className="metric-value">{members.current} of {members.total}</div>
+          <span className="metric-tag">Members</span>
+        </div>
+        <div className="metric-item">
+          <div className="metric-value">{monthlyDeposit}</div>
+          <span className="metric-tag">Monthly</span>
+        </div>
+        <button className="manage-slots-button" onClick={handleManageSlots}>
+          Manage Slots
+        </button>
+      </div>
     </div>
-    <div className="status-card-metrics">
-      <div className="metric-item">
-        <div className="metric-value">{members.current} of {members.total}</div>
-        <span className="metric-tag">Members</span>
-      </div>
-      <div className="metric-item">
-        <div className="metric-value">{monthlyDeposit}</div>
-        <span className="metric-tag">Monthly</span>
-      </div>
-      <button className="manage-slots-button">
-        Manage Slots
-      </button>
-    </div>
-  </div>
-);
+  );
+};
 
 const DashboardTab: React.FC = () => {
   const dashboardData = {

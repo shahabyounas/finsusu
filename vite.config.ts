@@ -6,15 +6,6 @@ import { resolve } from 'path'
 export default defineConfig({
   plugins: [react()],
   base: '/finsusu/',
-  build: {
-    outDir: 'dist',
-    sourcemap: true,
-    rollupOptions: {
-      input: {
-        main: resolve(__dirname, 'index.html'),
-      },
-    },
-  },
   resolve: {
     alias: {
       '@': resolve(__dirname, './src'),

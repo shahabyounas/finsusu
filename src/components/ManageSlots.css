@@ -1,0 +1,315 @@
+.manage-slots {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  padding: 2rem;
+}
+
+.manage-slots-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.back-button:hover {
+  color: #8A2BE2;
+}
+
+.manage-slots-header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.slots-container {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.slots-header {
+  margin-bottom: 2rem;
+}
+
+.slots-header h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.slots-header p {
+  margin: 0;
+  color: #666;
+  font-size: 1rem;
+}
+
+.slots-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.slot-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.slot-info h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.slot-info p {
+  margin: 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.status-button {
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.status-button.active {
+  background-color: #28a745;
+  color: white;
+}
+
+.status-button.pending {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.status-button.completed {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.add-slot-button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #8A2BE2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-slot-button:hover {
+  background-color: #7B1FA2;
+  transform: translateY(-2px);
+}
+
+.manage-slots-page {
+  min-height: 100vh;
+  background: #f7f8fa;
+  padding: 2rem 1rem;
+}
+
+.manage-slots-topbar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.back-arrow {
+  background: none;
+  border: none;
+  color: #222;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.group-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.status-badge {
+  margin-left: 1rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  background: #e6f4ea;
+  color: #1a7f37;
+  display: inline-block;
+}
+.status-badge.active {
+  background: #e6f4ea;
+  color: #1a7f37;
+}
+
+.manage-slots-columns {
+  display: flex;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.group-details-card, .slot-schedule-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  padding: 2rem 2.5rem;
+  flex: 1;
+}
+
+.group-details-card {
+  max-width: 380px;
+}
+
+.group-details-card h3,
+.slot-schedule-card h3 {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem 2rem;
+}
+.details-label {
+  color: #888;
+  font-size: 0.98rem;
+  margin-bottom: 0.2rem;
+}
+.details-value {
+  color: #222;
+  font-size: 1.08rem;
+  font-weight: 500;
+}
+
+.slot-schedule-card {
+  min-width: 340px;
+}
+.slot-schedule-sub {
+  color: #888;
+  font-size: 0.98rem;
+  margin-bottom: 1.5rem;
+}
+
+.slot-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.slot-row {
+  display: flex;
+  align-items: center;
+  background: #f7f8fa;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  border: 1.5px solid transparent;
+  transition: border 0.2s, background 0.2s;
+}
+.slot-row.selected {
+  background: #e9f0ff;
+  border: 1.5px solid #377dff;
+}
+
+.slot-number {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #377dff;
+  background: #e9f0ff;
+  border-radius: 50%;
+  width: 2.1rem;
+  height: 2.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.2rem;
+}
+
+.slot-info {
+  flex: 1;
+}
+.slot-title {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #222;
+}
+.slot-month {
+  color: #888;
+  font-size: 0.95rem;
+}
+
+.slot-badge {
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 0.3rem 1.1rem;
+  background: #f2f3f7;
+  color: #888;
+  margin-left: 1rem;
+  border: none;
+  outline: none;
+  min-width: 70px;
+  text-align: center;
+}
+.slot-badge.your {
+  background: #e9f0ff;
+  color: #377dff;
+  border: 1.5px solid #377dff;
+}
+.slot-badge.join {
+  background: #e6f4ea;
+  color: #1a7f37;
+  border: 1.5px solid #b7e4c7;
+  cursor: pointer;
+}
+.slot-badge.number {
+  background: #f2f3f7;
+  color: #888;
+  border: none;
+}
+
+@media (max-width: 900px) {
+  .manage-slots-columns {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .group-details-card, .slot-schedule-card {
+    max-width: 100%;
+    min-width: 0;
+    padding: 1.5rem 1rem;
+  }
+} 

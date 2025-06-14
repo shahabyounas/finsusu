@@ -1,0 +1,99 @@
+.payroll-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem 0;
+}
+
+.payroll-card {
+  background: #fafbfc;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+  margin-bottom: 0.5rem;
+}
+
+.payroll-card-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.payroll-card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.payroll-card-date {
+  color: #888;
+  font-size: 1rem;
+}
+
+.payroll-card-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.3rem;
+}
+
+.status-badge.active {
+  background: #e6f4ea;
+  color: #1a7f37;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.payroll-card-label {
+  color: #888;
+  font-size: 0.98rem;
+}
+
+.payroll-card-amount {
+  color: #222;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.breakdown-card {
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.5rem 2rem;
+}
+
+.breakdown-list {
+  width: 100%;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.breakdown-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  color: #222;
+}
+
+.breakdown-row.total {
+  font-weight: 700;
+  color: #377dff;
+}
+
+@media (max-width: 600px) {
+  .payroll-card, .breakdown-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+  .payroll-card-right {
+    align-items: flex-start;
+  }
+} 

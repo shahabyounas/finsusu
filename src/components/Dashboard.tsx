@@ -3,11 +3,12 @@ import React, { useState } from 'react';
 import Header from './Header';
 import DashboardTab from './DashboardTab';
 import CurrencyConfig from './CurrencyConfig';
+import PayrollTabs from './PayrollTab';
 import './Dashboard.css';
 
 // Placeholder components for other tabs
 const GroupsTab = () => <div className="tab-content">Groups Management Content</div>;
-const PayrollTab = () => <div className="tab-content">Payroll Management Content</div>;
+const PayrollTab = () => <PayrollTabs />;
 const LiveUpdatesTab = () => <div className="tab-content">Live Updates Content</div>;
 
 const SettingsTab: React.FC = () => (
