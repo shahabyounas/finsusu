@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import Header from './Header';
 import DashboardTab from './DashboardTab';
 import CurrencyConfig from './CurrencyConfig';
@@ -18,7 +18,7 @@ const SettingsTab: React.FC = () => (
 
 const Dashboard: React.FC = () => {
   const [activeTab, setActiveTab] = useState('dashboard');
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const tabs = [
     { id: 'dashboard', label: 'Dashboard', component: DashboardTab },
