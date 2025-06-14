@@ -1,28 +1,26 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from './Header';
+import DashboardTab from './DashboardTab';
 import './Dashboard.css';
 
-// Placeholder components for each tab
-const Overview = () => <div className="tab-content">Overview Content</div>;
-const Transactions = () => <div className="tab-content">Transactions Content</div>;
-const Analytics = () => <div className="tab-content">Analytics Content</div>;
-const Reports = () => <div className="tab-content">Reports Content</div>;
-const Settings = () => <div className="tab-content">Settings Content</div>;
+// Placeholder components for other tabs
+const GroupsTab = () => <div className="tab-content">Groups Management Content</div>;
+const PayrollTab = () => <div className="tab-content">Payroll Management Content</div>;
+const LiveUpdatesTab = () => <div className="tab-content">Live Updates Content</div>;
 
 const Dashboard: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('overview');
+  const [activeTab, setActiveTab] = useState('dashboard');
   const navigate = useNavigate();
 
   const tabs = [
-    { id: 'overview', label: 'Overview', component: Overview },
-    { id: 'transactions', label: 'Transactions', component: Transactions },
-    { id: 'analytics', label: 'Analytics', component: Analytics },
-    { id: 'reports', label: 'Reports', component: Reports },
-    { id: 'settings', label: 'Settings', component: Settings },
+    { id: 'dashboard', label: 'Dashboard', component: DashboardTab },
+    { id: 'groups', label: 'Groups', component: GroupsTab },
+    { id: 'payroll', label: 'Payroll', component: PayrollTab },
+    { id: 'live-updates', label: 'Live Updates', component: LiveUpdatesTab },
   ];
 
-  const ActiveComponent = tabs.find(tab => tab.id === activeTab)?.component || Overview;
+  const ActiveComponent = tabs.find(tab => tab.id === activeTab)?.component || DashboardTab;
 
   return (
     <div className="dashboard">
